@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./disciplina-lista.component.css']
 })
 export class DisciplinaListaComponent implements OnInit {
-
+  
+  disciplinas = [];
+  
   constructor() { }
 
   ngOnInit() {

@@ -1,3 +1,22 @@
-<p>
-  disciplina-lista works!
-</p>
+<p-table [value]="disciplinas">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Descrição</th>
+      <th>Status</th>
+      <th>Data Criação</th>
+      <th>Usuário Criação</th>
+      <th>Data Alteração</th>
+      <th>Usuário Alteração</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-disc>
+    <tr>
+      <td>{{disc.descricao}}</td>
+      <td>{{disc.status}}</td>
+      <td>{{disc.datacriacao}}</td>
+      <td>{{disc.usuariocriacao}}</td>
+      <td>{{disc.dataalteracao}}</td>
+      <td>{{disc.usuarioalteracao}}</td>
+    </tr>
+  </ng-template>
+</p-table>

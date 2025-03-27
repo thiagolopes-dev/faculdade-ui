@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 @NgModule({
@@ -7,7 +8,8 @@ import { TableModule } from 'primeng/table';
   exports: [
     ButtonModule,
     InputTextModule,
-    TableModule
+    TableModule,
+    CardModule
   ]
 })
 export class PrimengModule { }

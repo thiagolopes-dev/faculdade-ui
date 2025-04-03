@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import { Disciplina } from '../core/models/disciplina.model';
 @Injectable({
   providedIn: 'root',
 })
@@ -18,5 +19,9 @@ export class DisciplinaService {
         return response;
       }
     );
+  }
+
+  adicionar(obj: Disciplina): Promise<Disciplina>{
+    return firstValueFrom(this.http.post<Disciplina>(this.disciplinaUrl, obj));
   }
 }

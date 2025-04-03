@@ -1,3 +1,22 @@
-<p>
-  disciplina-cadastro works!
-</p>
+
+  <p-card header="Cadastro de Disciplina">
+    <div class="flex flex-wrap col-12">
+      <button pButton type="button" class="p-button p-button-raided" 
+      icon="pi pi-caret-left" pTooltip="Voltar" tooltipPosition="top" label="Voltar"
+       routerLink="/disciplinas"></button>
+    </div>
+
+    <form #form="ngForm" autocomplete="off" (ngSubmit)="cadastroDisciplina(form)">
+         <div class="grid">
+          <span class="col-12 -mb-3">Descrição</span>
+          <div class="col-12 md:col-6 lg:col-3">
+            
+            <input pInputText name="descricao" #descricao="ngModel" [(ngModel)]="disciplina.descricao" type="text">
+          </div>
+          <div>
+            <button pButton type="submit" label="Salvar"></button>
+          </div>
+         </div>
+    </form>
+
+  </p-card>

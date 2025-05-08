@@ -1,5 +1,5 @@
 export class Disciplina {
-    iddisciplina?: number;
+    id?: number;
     descricao?: string;
     status?: boolean;
     datacriacao?: Date;

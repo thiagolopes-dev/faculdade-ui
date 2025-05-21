@@ -17,10 +17,10 @@ export class DisciplinaListaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.carregarDisciplinas();
+    this.carregar();
   }
 
-  carregarDisciplinas(){
+  carregar(){
     this.spinner.show();
     this.disciplinaService.listar().then((obj) => {
       this.disciplinas = obj;

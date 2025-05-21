@@ -1,5 +1,5 @@
 export class Professor {
-  idprofessor?: number;
+  id?: number;
   nome?: string;
   cpf?: string;
   status?: boolean;

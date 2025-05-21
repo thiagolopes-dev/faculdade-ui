@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './pages/core/core.module';
 import { DisciplinaModule } from './pages/disciplina/disciplina.module';
+import { ProfessorModule } from './pages/professor/professor.module';
 import { PrimengModule } from './primeng.module';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { PrimengModule } from './primeng.module';
     AppRoutingModule,
     PrimengModule,
     DisciplinaModule,
+    ProfessorModule,
     NgxSpinnerModule
   ],
   providers: [

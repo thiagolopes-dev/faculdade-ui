@@ -1,0 +1,15 @@
+<div class="colorNav">
+  <div class="flex justify-content-between flex-wrap">
+    <div class="d-flex align-items-center">
+      <span class="cursor-pointer">
+        <i class="pi pi-bars" (click)="sidebar = true" style="font-size: 1.5rem"></i>
+      </span>
+    </div>
+  </div>
+</div>
+
+<p-sidebar [(visible)]="sidebar">
+  <button icon="pi pi-list" pButton type="button" label="Disciplinas" class="p-button-rounded w-full" routerLink="/disciplinas" (click)="sidebar = false"></button>
+
+  <button icon="pi pi-users" pButton type="button" label="Professores" class="p-button-rounded w-full mt-2" routerLink="/professores" (click)="sidebar = false"></button>
+</p-sidebar>

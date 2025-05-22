@@ -1,7 +1,7 @@
 <p-card header="{{editando ? 'Edição de' : 'Cadastro de'}} Disciplinas">
   <!-- <h4>{{editando ? 'Edição de' : 'Cadastro de'}} Disciplinas</h4> -->
   <div class="flex flex-wrap col-12">
-    <button pButton type="button" class="p-button p-button-raided" icon="pi pi-caret-left" pTooltip="Voltar"
+    <button pButton type="button" class="p-button p-button-rounded" icon="pi pi-caret-left" pTooltip="Voltar"
       tooltipPosition="top" label="Voltar" routerLink="/disciplinas"></button>
   </div>
 
@@ -20,7 +20,7 @@
           name="status"></p-inputSwitch>
       </div>
       <div>
-        <button [disabled]="form.invalid || salvando" pButton type="submit" label="Salvar"></button>
+        <button icon="pi pi-save" class="p-button-rounded p-button-success" [disabled]="form.invalid || salvando" pButton type="submit" label="Salvar"></button>
       </div>
     </div>
 

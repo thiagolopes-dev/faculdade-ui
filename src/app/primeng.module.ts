@@ -4,9 +4,9 @@ import { CardModule } from 'primeng/card';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { SidebarModule } from 'primeng/sidebar';
 import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
-
 @NgModule({
 
   exports: [
@@ -16,7 +16,8 @@ import { ToastModule } from 'primeng/toast';
     CardModule,
     ToastModule,
     InputSwitchModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    SidebarModule
   ]
 })
 export class PrimengModule { }

@@ -1,7 +1,7 @@
 
 <p-card header="Lista de Disciplinas">
   <div class="flex flex-wrap col-12">
-    <p-button  icon="pi pi-plus" routerLink="novo" label="Novo"></p-button>
+    <button pButton class="p-button-rounded"  icon="pi pi-plus" routerLink="novo" label="Novo"></button>
   </div>
   <p-table [value]="disciplinas" styleClass="p-datatable-striped">
     <ng-template pTemplate="header">

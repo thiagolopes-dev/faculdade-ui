@@ -1,39 +1,40 @@
-<p-card header="{{editando ? 'Edição de' : 'Cadastro de'}} Disciplinas">
-  <!-- <h4>{{editando ? 'Edição de' : 'Cadastro de'}} Disciplinas</h4> -->
-  <div class="flex flex-wrap col-12">
-    <button pButton type="button" class="p-button p-button-rounded" icon="pi pi-caret-left" pTooltip="Voltar"
-      tooltipPosition="top" label="Voltar" routerLink="/disciplinas"></button>
+<p-card styleClass="card-adjust" header="{{editando ? 'Edição de' : 'Cadastro de'}} Disciplinas">
+  <!-- Botão Voltar -->
+  <div class="mb-3">
+    <button pButton type="button" class="p-button p-button-rounded" icon="pi pi-caret-left"  routerLink="/disciplinas"></button>
   </div>
 
   <form #form="ngForm" autocomplete="off" (ngSubmit)="salvar(form)">
-    <div class="grid flex flex-wrap">
-      <span class="col-12 -mb-3">Descrição</span>
-      <div class="col-12 md:col-6 lg:col-3 w-full">
+    <div class="flex flex-column align-items-center gap-3">
 
-        <input pInputText name="descricao" #descricao="ngModel" [(ngModel)]="disciplina.descricao" type="text" minlength="5"
-          required="true">
+      <!-- Campo Descrição -->
+      <div class="w-full md:w-30rem">
+        <label for="descricao">Descrição</label>
+        <input id="descricao" pInputText name="descricao" #descricao="ngModel"
+               [(ngModel)]="disciplina.descricao" type="text" minlength="5" required
+               class="w-full" />
         <app-message [control]="descricao" error="required" text="Informe uma descrição"></app-message>
-        <app-message [control]="descricao" error="minlength" text="Mínimo  de {{ descricao.errors?.minlength?.requiredLength}} de caracteres"></app-message>
+        <app-message [control]="descricao" error="minlength" text="Mínimo de {{ descricao.errors?.minlength?.requiredLength }} caracteres"></app-message>
       </div>
-      <div class="col-12">
-        <p-inputSwitch [ngModelOptions]="{standalone: true}" binary="true" [(ngModel)]="disciplina.status"
-          name="status"></p-inputSwitch>
-      </div>
+
+      <!-- Switch Status -->
       <div>
-        <button icon="pi pi-save" class="p-button-rounded p-button-success" [disabled]="form.invalid || salvando" pButton type="submit" label="Salvar"></button>
+        <p-inputSwitch [ngModelOptions]="{standalone: true}" binary="true" [(ngModel)]="disciplina.status" name="status"></p-inputSwitch>
+      </div>
+
+      <!-- Botão Salvar -->
+      <div class="col-12 md:col-6 lg:col-3">
+        <button pButton type="submit" icon="pi pi-save" label="Salvar"
+                class="p-button-rounded p-button-success w-full"
+                [disabled]="form.invalid || salvando">
+        </button>
       </div>
     </div>
 
-    <div *ngIf="salvando" class="grid justify-content-center mt-2">
-      <div class="grid col-12 justify-content-center">
-        <p-progressSpinner [style]="{ width: '50px', height: '50px' }" styleClass="custom-spinner" strokeWidth="5"
-          animationDuration=".5s">
-        </p-progressSpinner>
-      </div>
-      <div class="grid col-12 justify-content-center">
-        <h6>Salvando aguarde...</h6>
-      </div>
+    <!-- Spinner de carregamento -->
+    <div *ngIf="salvando" class="flex flex-column align-items-center mt-4">
+      <p-progressSpinner [style]="{ width: '50px', height: '50px' }" styleClass="custom-spinner" strokeWidth="5" animationDuration=".5s"></p-progressSpinner>
+      <h6 class="mt-2">Salvando, aguarde...</h6>
     </div>
   </form>
-
 </p-card>

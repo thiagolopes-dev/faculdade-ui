@@ -21,41 +21,34 @@
 <p-overlayPanel #op>
   <ng-template pTemplate="content">
     <div class="col-12">
-      <button pButton class="p-button-rounded p-button-primary" icon="pi pi-lock" label="Alterar Senha" (click)="op.toggle($event)" routerLink="/alterarsenha"></button>
+      <button pButton class="p-button-rounded p-button-primary" icon="pi pi-lock" label="Alterar Senha"
+        (click)="op.toggle($event)" routerLink="/alterarsenha"></button>
     </div>
-   
+
 
   </ng-template>
 </p-overlayPanel>
 
-<p-sidebar [(visible)]="sibebar" >
+<p-sidebar [(visible)]="sibebar">
   <div class="flex flex-wrap">
     <div class="col-12">
-      <p-button
-        styleClass="p-button-rounded text-white w-full text-1xl btn-menu"
-        label="Disciplinas"
-        routerLink="/disciplinas"
-        
-        routerLinkActive="ativo"
-        (click)="sibebar = false"
-      ></p-button>
+      <p-button styleClass="p-button-rounded text-white w-full text-1xl btn-menu" label="Disciplinas"
+        routerLink="/disciplinas" routerLinkActive="ativo" (click)="sibebar = false"></p-button>
     </div>
     <div class="col-12">
-      <p-button
-        styleClass="p-button-rounded text-white w-full text-1xl btn-menu"
-        label="Professores"
-        routerLink="/professores"
-        
-        routerLinkActive="ativo"
-        (click)="sibebar = false"
-      ></p-button>
+      <p-button styleClass="p-button-rounded text-white w-full text-1xl btn-menu" label="Professores"
+        routerLink="/professores" routerLinkActive="ativo" (click)="sibebar = false"></p-button>
     </div>
-  
-    
-   
-    
-   
-   
-    
+        <div class="col-12">
+      <p-button styleClass="p-button-rounded text-white w-full text-1xl btn-menu" label="Alunos"
+        routerLink="/alunos" routerLinkActive="ativo" (click)="sibebar = false"></p-button>
+    </div>
+
+
+
+
+
+
+
   </div>
 </p-sidebar>
